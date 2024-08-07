@@ -1,0 +1,2 @@
+# aisafetyresearchaws
+Aisafetyresearchsiteonawshosting with amplify
