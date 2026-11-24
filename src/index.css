@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #0a0d0a;
+  }
+
+  body {
+    font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ---- Section: Inside the Machine (scoped under .theme-inside) ---- */
+:root {
+  --layer-gateway: 19 191 255;
+  --layer-coordination: 0 216 229;
+  --layer-model: 185 84 237;
+
+  --field: 1 11 21;
+  --field-raised: 2 17 32;
+  --ink: 232 238 244;
+  --ink-muted: 150 166 184;
+  --ink-faint: 88 104 122;
+  --line: 34 52 72;
+}
+
+.theme-inside {
+  background-color: rgb(var(--field));
+  color: rgb(var(--ink));
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.625;
+}
+
+.theme-inside h1,
+.theme-inside h2,
+.theme-inside h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.theme-inside ::selection {
+  background-color: rgb(var(--layer-gateway) / 0.3);
+}
+
+.diagram-stage svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

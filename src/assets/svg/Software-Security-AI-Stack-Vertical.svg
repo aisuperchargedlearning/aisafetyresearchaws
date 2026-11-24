@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 1480">
+  <!-- Generator: Adobe Illustrator 31.0.0, SVG Export Plug-In . SVG Version: 2.1.5 Build 84)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20 {
+        isolation: isolate;
+      }
+
+      .st0, .st1, .st2, .st5, .st12, .st14, .st15, .st18, .st19, .st20 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .st0, .st15 {
+        font-size: 25px;
+      }
+
+      .st0, .st19 {
+        fill: #4fc3f7;
+      }
+
+      .st21 {
+        filter: url(#cyanGlow2);
+      }
+
+      .st22 {
+        filter: url(#cyanGlow1);
+      }
+
+      .st23 {
+        filter: url(#orangeGlow);
+      }
+
+      .st24 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st24, .st25, .st26 {
+        stroke: #2dd4bf;
+      }
+
+      .st24, .st25, .st26, .st27, .st28, .st29, .st30, .st31 {
+        stroke-width: 1.5px;
+      }
+
+      .st25 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st26 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st1, .st2, .st5, .st14 {
+        fill: #fff;
+      }
+
+      .st1, .st8, .st17 {
+        font-size: 20px;
+      }
+
+      .st27 {
+        fill: url(#linear-gradient8);
+        stroke: #a855f7;
+      }
+
+      .st32, .st33, .st34, .st35, .st36, .st37, .st38, .st39, .st40, .st41, .st42, .st43, .st44, .st45, .st46, .st47, .st48, .st49, .st50, .st51, .st52 {
+        fill: none;
+      }
+
+      .st32, .st53, .st34, .st35, .st38, .st39, .st42, .st43, .st29, .st30, .st31, .st50, .st52 {
+        stroke: #38bdf8;
+      }
+
+      .st32, .st34, .st35, .st38, .st39, .st40, .st41, .st44, .st45, .st47, .st52 {
+        stroke-linecap: round;
+      }
+
+      .st32, .st36, .st37, .st47, .st50 {
+        stroke-linejoin: round;
+      }
+
+      .st32, .st37, .st38, .st41, .st43, .st47, .st50 {
+        stroke-width: 3px;
+      }
+
+      .st2 {
+        font-size: 44px;
+        letter-spacing: -.01em;
+      }
+
+      .st3 {
+        fill: #7dd3fc;
+      }
+
+      .st3, .st4, .st10, .st14, .st16, .st18 {
+        font-size: 21px;
+      }
+
+      .st3, .st16, .st17 {
+        font-family: Arial-ItalicMT, Arial;
+        font-style: italic;
+      }
+
+      .st54 {
+        fill: url(#linear-gradient10);
+      }
+
+      .st33 {
+        stroke: #7dd3fc;
+        stroke-dasharray: 8 7;
+      }
+
+      .st33, .st53, .st36, .st42, .st44, .st46, .st48, .st51 {
+        stroke-width: 2.5px;
+      }
+
+      .st53 {
+        fill: #0b192c;
+      }
+
+      .st34 {
+        stroke-width: 7px;
+      }
+
+      .st55 {
+        fill: #2a1d10;
+      }
+
+      .st35 {
+        stroke-width: 5.5px;
+      }
+
+      .st36, .st37, .st56, .st57, .st44, .st45, .st46, .st47 {
+        stroke: #f59e0b;
+      }
+
+      .st39, .st45 {
+        stroke-width: 6px;
+      }
+
+      .st4, .st6 {
+        fill: #f1f5f9;
+      }
+
+      .st4, .st6, .st7, .st8, .st9, .st10, .st11, .st13 {
+        font-family: ArialMT, Arial;
+      }
+
+      .st58 {
+        fill: url(#linear-gradient);
+      }
+
+      .st5, .st6 {
+        font-size: 22px;
+      }
+
+      .st59 {
+        filter: url(#cyanGlow);
+      }
+
+      .st7 {
+        font-size: 18px;
+      }
+
+      .st7, .st9, .st13 {
+        fill: #cbd5e1;
+      }
+
+      .st8, .st10 {
+        fill: #e2e8f0;
+      }
+
+      .st56 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st56, .st57 {
+        stroke-width: 2px;
+      }
+
+      .st9, .st11 {
+        font-size: 17px;
+      }
+
+      .st57 {
+        fill: url(#linear-gradient11);
+      }
+
+      .st11 {
+        fill: #e9d5ff;
+      }
+
+      .st40 {
+        stroke: #fbbf24;
+        stroke-width: 3.5px;
+      }
+
+      .st41 {
+        stroke: #fde68a;
+      }
+
+      .st28 {
+        fill: url(#linear-gradient9);
+      }
+
+      .st28, .st48, .st49 {
+        stroke: #c084fc;
+      }
+
+      .st12 {
+        fill: #d88cff;
+      }
+
+      .st12, .st19, .st20 {
+        font-size: 31px;
+      }
+
+      .st13 {
+        font-size: 19px;
+      }
+
+      .st29 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st30 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st31 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st15, .st60 {
+        fill: #f59e0b;
+      }
+
+      .st61 {
+        fill: #0f2847;
+      }
+
+      .st16 {
+        fill: #5eead4;
+      }
+
+      .st17 {
+        fill: #d8b4fe;
+      }
+
+      .st18 {
+        fill: #fbbf24;
+      }
+
+      .st20 {
+        fill: #38d9f5;
+      }
+
+      .st49 {
+        stroke-width: 4px;
+      }
+
+      .st62 {
+        fill: #38bdf8;
+      }
+
+      .st51 {
+        stroke: #38d9f5;
+      }
+
+      .st52 {
+        stroke-width: 2.2px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-458.04" y1="1280.14" x2="-458.04" y2="1279.14" gradientTransform="translate(458541 1894600) scale(1000 -1480)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1322"/>
+      <stop offset=".5" stop-color="#0a1424"/>
+      <stop offset="1" stop-color="#080f1c"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur result="blur" stdDeviation="4"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="orangeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur result="blur" stdDeviation="4"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="linear-gradient1" x1="-458.51" y1="1280.46" x2="-457.51" y2="1279.46" gradientTransform="translate(427363 555956) scale(932 -434)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d213d" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#173d6b" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="-457.1" y1="1281.52" x2="-457.1" y2="1280.52" gradientTransform="translate(150151 169532) scale(328 -132)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0e2038"/>
+      <stop offset="1" stop-color="#0a182b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient3" x1="-457.09" y1="1281.52" x2="-457.09" y2="1280.52" gradientTransform="translate(149447 169680) scale(326 -132)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0e2038"/>
+      <stop offset="1" stop-color="#0a182b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient4" x1="-456.94" y1="1281.47" x2="-456.94" y2="1280.47" gradientTransform="translate(135133 174724) scale(294 -136)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2b1e12"/>
+      <stop offset="1" stop-color="#1c140c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient5" x1="-458.51" y1="1280.58" x2="-457.51" y2="1279.58" gradientTransform="translate(427363 438656) scale(932 -342)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a262e" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#134c56" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient6" x1="-456.8" y1="1282.05" x2="-456.8" y2="1281.05" gradientTransform="translate(143787 126552) scale(314 -98)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b242b"/>
+      <stop offset="1" stop-color="#081a20"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient7" x1="-456.8" y1="1282.04" x2="-456.8" y2="1281.04" gradientTransform="translate(145031 126552) scale(316 -98)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b242b"/>
+      <stop offset="1" stop-color="#081a20"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient8" x1="-458.51" y1="1280.52" x2="-457.51" y2="1279.52" gradientTransform="translate(427363 495344) scale(932 -386)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#211238" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#351c5c" stop-opacity=".94"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient9" x1="-456.82" y1="1281.82" x2="-456.82" y2="1280.82" gradientTransform="translate(125361 142306) scale(274 -110)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2c174d"/>
+      <stop offset="1" stop-color="#1e0f36"/>
+    </linearGradient>
+    <filter id="cyanGlow1" data-name="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur result="blur" stdDeviation="4"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="linear-gradient10" x1="-457.42" y1="1281.59" x2="-457.42" y2="1280.59" gradientTransform="translate(194509 162778) scale(424 -126)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14294a"/>
+      <stop offset="1" stop-color="#0d1c36"/>
+    </linearGradient>
+    <filter id="cyanGlow2" data-name="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur result="blur" stdDeviation="4"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="linear-gradient11" x1="-456.71" y1="1281.9" x2="-456.71" y2="1280.9" gradientTransform="translate(117725 159704) scale(256 -124)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2b1e12"/>
+      <stop offset="1" stop-color="#1c140c"/>
+    </linearGradient>
+  </defs>
+  <rect class="st58" width="1000" height="1480"/>
+  <text class="st2" transform="translate(118.55 72)"><tspan x="0" y="0">Software &amp; Security Layered AI Stack</tspan></text>
+  <g id="User_Input_Group">
+  <text class="st0" transform="translate(46 148)"><tspan x="0" y="0">USER</tspan></text>
+  <text class="st10" transform="translate(46 176)"><tspan x="0" y="0">A question</tspan></text>
+  <text class="st10" transform="translate(46 202)"><tspan x="0" y="0">enters</tspan></text>
+  <g class="st59">
+    <path class="st61" d="M190,138h242c7.73,0,14,6.27,14,14v32c0,7.73-6.27,14-14,14h-218l-20,16,4-16h-8c-7.73,0-14-6.27-14-14v-32C176,144.27,182.27,138,190,138Z"/>
+    <path class="st42" d="M190,138h242c7.73,0,14,6.27,14,14v32c0,7.73-6.27,14-14,14h-218l-20,16,4-16h-8c-7.73,0-14-6.27-14-14v-32C176,144.27,182.27,138,190,138Z"/>
+  </g>
+  <text class="st6" transform="translate(201.7 176)"><tspan x="0" y="0">Why is the sky blue?</tspan></text>
+  </g>
+  <g id="User_Output_Group">
+    <text class="st15" transform="translate(580 148)"><tspan x="0" y="0">USER</tspan></text>
+    <text class="st10" transform="translate(580 176)"><tspan x="0" y="0">Answer streams back</tspan></text>
+    <text class="st10" transform="translate(580 202)"><tspan x="0" y="0">as it&apos;s generated</tspan></text>
+    <g class="st23">
+      <rect class="st55" x="816" y="136" width="148" height="64" rx="12" ry="12"/>
+      <rect class="st46" x="816" y="136" width="148" height="64" rx="12" ry="12"/>
+    </g>
+    <line class="st40" x1="836" y1="156" x2="914" y2="156"/>
+    <line class="st40" x1="836" y1="168" x2="932" y2="168"/>
+    <line class="st40" x1="836" y1="180" x2="906" y2="180"/>
+    <line class="st41" x1="944" y1="166" x2="944" y2="184"/>
+  </g>
+  <g id="Layer_01_The_Gateway">
+    <rect class="st30" x="34" y="236" width="932" height="434" rx="16" ry="16"/>
+    <g id="Gateway_Header">
+      <text class="st19" transform="translate(56 286)"><tspan x="0" y="0">THE GATEWAY</tspan></text>
+      <text class="st6" transform="translate(56 318)"><tspan x="0" y="0">Applications, Agents &amp; Safety Controls</tspan></text>
+      <text class="st3" transform="translate(56 348)"><tspan x="0" y="0">Observable text &amp; API interactions</tspan></text>
+    </g>
+  </g>
+    <g id="Card_1_Safety_Guardrails">
+      <rect class="st31" x="58" y="372" width="328" height="132" rx="12" ry="12"/>
+      <g id="Icon_Shield_1">
+        <path class="st50" d="M104,398l20,8v16c0,13-9,22-20,27-11-5-20-14-20-27v-16L104,398Z"/>
+        <path class="st32" d="M95,423l7,7,12-14"/>
+      </g>
+      <text class="st14" transform="translate(154 408)"><tspan x="0" y="0">1. Safety Guardrails</tspan></text>
+      <text class="st14" transform="translate(154 434)"><tspan x="0" y="0">&amp; Moderation</tspan></text>
+      <text class="st7" transform="translate(154 462)"><tspan x="0" y="0">Checks and controls</tspan></text>
+      <text class="st7" transform="translate(154 484)"><tspan x="0" y="0">incoming requests</tspan></text>
+    </g>
+    <g id="Card_2_Planning_Retrieval">
+      <rect class="st29" x="272" y="520" width="326" height="132" rx="12" ry="12"/>
+      <g id="Icon_Doc_Search">
+        <rect class="st42" x="294" y="544" width="30" height="40" rx="3" ry="3"/>
+        <line class="st52" x1="301" y1="554" x2="317" y2="554"/>
+        <line class="st52" x1="301" y1="562" x2="317" y2="562"/>
+        <line class="st52" x1="301" y1="570" x2="311" y2="570"/>
+        <circle class="st53" cx="326" cy="576" r="9"/>
+        <line class="st38" x1="332" y1="582" x2="340" y2="590"/>
+      </g>
+      <text class="st14" transform="translate(358 556)"><tspan x="0" y="0">2. Planning, Retrieval</tspan></text>
+      <text class="st14" transform="translate(358 582)"><tspan x="0" y="0">&amp; Tokenization</tspan></text>
+      <text class="st7" transform="translate(358 610)"><tspan x="0" y="0">Prepares context and</tspan></text>
+      <text class="st7" transform="translate(358 632)"><tspan x="0" y="0">model input</tspan></text>
+    </g>
+    <g id="Card_7_Output_Safety">
+      <rect class="st56" x="646" y="444" width="294" height="136" rx="12" ry="12"/>
+      <g id="Icon_Shield_7">
+        <path class="st37" d="M690,466l20,8v16c0,13-9,22-20,27-11-5-20-14-20-27v-16L690,466Z"/>
+        <path class="st47" d="M681,491l7,7,12-14"/>
+      </g>
+      <text class="st18" transform="translate(736 482)"><tspan x="0" y="0">7. Output Safety</tspan></text>
+      <text class="st18" transform="translate(736 508)"><tspan x="0" y="0">&amp; Delivery</tspan></text>
+      <text class="st7" transform="translate(736 536)"><tspan x="0" y="0">Checks and streams</tspan></text>
+      <text class="st7" transform="translate(736 558)"><tspan x="0" y="0">responses</tspan></text>
+    </g>
+  <g id="Layer_02_The_Coordination">
+  <rect class="st25" x="34" y="696" width="932" height="342" rx="16" ry="16"/>
+  <g id="Coord_Header">
+    <text class="st20" transform="translate(56 746)"><tspan x="0" y="0">THE COORDINATION</tspan></text>
+    <text class="st20" transform="translate(56 782)"><tspan x="0" y="0">LAYER</tspan></text>
+    <text class="st6" transform="translate(56 816)"><tspan x="0" y="0">Scheduling, Batching &amp;</tspan></text>
+    <text class="st6" transform="translate(56 844)"><tspan x="0" y="0">Memory Management</tspan></text>
+    <text class="st16" transform="translate(56 876)"><tspan x="0" y="0">Monitored operations</tspan></text>
+  </g>
+  </g>
+  <g id="Card_3_Scheduler_Batcher">
+    <rect class="st24" x="195.95" y="910.97" width="314" height="98" rx="12" ry="12"/>
+    <g id="Icon_Scheduler">
+      <rect class="st51" x="231.95" y="932.97" width="14" height="12" rx="2" ry="2"/>
+      <line class="st51" x1="238.95" y1="944.97" x2="238.95" y2="954.97"/>
+      <line class="st51" x1="221.95" y1="954.97" x2="255.95" y2="954.97"/>
+      <line class="st51" x1="221.95" y1="954.97" x2="221.95" y2="962.97"/>
+      <line class="st51" x1="255.95" y1="954.97" x2="255.95" y2="962.97"/>
+      <rect class="st51" x="214.95" y="962.97" width="14" height="12" rx="2" ry="2"/>
+      <rect class="st51" x="248.95" y="962.97" width="14" height="12" rx="2" ry="2"/>
+    </g>
+    <text class="st1" transform="translate(279.95 940.97)"><tspan x="0" y="0">3. Scheduler &amp; Batcher</tspan></text>
+    <text class="st7" transform="translate(279.95 966.97)"><tspan x="0" y="0">Coordinates active</tspan></text>
+    <text class="st7" transform="translate(279.95 988.97)"><tspan x="0" y="0">inference requests</tspan></text>
+  </g>
+  <g id="Card_4_KV_Cache_Manager">
+    <rect class="st26" x="523" y="912" width="316" height="98" rx="12" ry="12"/>
+    <text class="st1" transform="translate(532 942)"><tspan x="0" y="0">4. KV Cache Manager</tspan></text>
+    <text class="st7" transform="translate(532 968)"><tspan x="0" y="0">Manages attention</tspan></text>
+    <text class="st7" transform="translate(532 990)"><tspan x="0" y="0">memory (KV cache)</tspan></text>
+  <g id="Icon_Database_KV">
+    <ellipse class="st42" cx="768.43" cy="947.27" rx="20" ry="7"/>
+    <path class="st42" d="M748.43,947.27v14c0,4,9,7,20,7s20-3,20-7v-14"/>
+    <path class="st42" d="M748.43,961.27v13c0,4,9,7,20,7s20-3,20-7v-13"/>
+    <path class="st42" d="M748.43,974.27v11c0,4,9,7,20,7s20-3,20-7v-11"/>
+  </g>
+  </g>
+  <g id="Layer_03_Model_Execution">
+  <rect class="st27" x="34" y="1064" width="932" height="386" rx="16" ry="16"/>
+  <g id="Exec_Header">
+    <text class="st12" transform="translate(56 1114)"><tspan x="0" y="0">THE MODEL</tspan></text>
+    <text class="st12" transform="translate(56 1150)"><tspan x="0" y="0">EXECUTION LAYER</tspan></text>
+    <text class="st4" transform="translate(56 1184)"><tspan x="0" y="0">Model Runtime, Weights &amp;</tspan></text>
+    <text class="st4" transform="translate(56 1212)"><tspan x="0" y="0">Token Generation</tspan></text>
+    <text class="st17" transform="translate(56 1246)"><tspan x="0" y="0">Partially understood</tspan></text>
+    <text class="st17" transform="translate(56 1274)"><tspan x="0" y="0">model mechanisms</tspan></text>
+  </g>
+  </g>
+  <g id="Card_Model_Weights">
+    <rect class="st28" x="54" y="1306" width="274" height="110" rx="12" ry="12"/>
+    <g id="Icon_Model_Weights">
+      <ellipse class="st48" cx="94" cy="1336" rx="20" ry="7"/>
+      <path class="st48" d="M74,1336v14c0,4,9,7,20,7s20-3,20-7v-14"/>
+      <path class="st48" d="M74,1350v14c0,4,9,7,20,7s20-3,20-7v-14"/>
+      <path class="st48" d="M74,1364v14c0,4,9,7,20,7s20-3,20-7v-14"/>
+    </g>
+    <text class="st14" transform="translate(134 1344)"><tspan x="0" y="0">Model Weights</tspan></text>
+    <text class="st11" transform="translate(134 1372)"><tspan x="0" y="0">Loaded in GPU HBM</tspan></text>
+    <text class="st11" transform="translate(134 1394)"><tspan x="0" y="0">(for inference)</tspan></text>
+    <line class="st49" x1="328" y1="1361" x2="352" y2="1361"/>
+  </g>
+  <g id="Card_5_Model_Execution">
+    <g class="st22">
+      <rect class="st54" x="352" y="1298" width="424" height="126" rx="22" ry="22"/>
+      <rect class="st43" x="352" y="1298" width="424" height="126" rx="22" ry="22"/>
+    </g>
+    <g id="Icon_Cycle_Left">
+      <path class="st34" d="M428,1347c-7.88-10.66-22.9-12.92-33.56-5.04-10.67,7.87-12.92,22.9-5.05,33.56,7.88,10.66,22.91,12.92,33.57,5.04,4.5-3.32,7.7-8.12,9.04-13.56"/>
+      <polygon class="st62" points="418 1345 436 1337 434 1357 418 1345"/>
+    </g>
+    <g id="Icon_Cycle_Right">
+      <path class="st34" d="M742,1347c-7.88-10.66-22.9-12.92-33.56-5.04-10.67,7.87-12.92,22.9-5.05,33.56,7.88,10.66,22.91,12.92,33.57,5.04,4.5-3.32,7.7-8.12,9.04-13.56"/>
+      <polygon class="st62" points="732 1345 750 1337 748 1357 732 1345"/>
+    </g>
+    <text class="st5" transform="translate(460 1340)"><tspan x="0" y="0">5. Model Execution</tspan></text>
+    <text class="st13" transform="translate(460 1370)"><tspan x="0" y="0">Prefill, decode &amp; token</tspan></text>
+    <text class="st13" transform="translate(460 1396)"><tspan x="0" y="0">selection (on GPU)</tspan></text>
+  </g>
+  <text class="st8" transform="translate(403.4092 1146)"><tspan x="0" y="0">Continuous</tspan></text>
+  <text class="st8" transform="translate(404.5176 1172)"><tspan x="0" y="0">Scheduling</tspan></text>
+  <text class="st8" transform="translate(400.6357 1198)"><tspan x="0" y="0">&amp; Execution</tspan></text>
+  <text class="st8" transform="translate(586.9756 1160)"><tspan x="0" y="0">KV Cache</tspan></text>
+  <text class="st8" transform="translate(573.6309 1186)"><tspan x="0" y="0">Management</tspan></text>
+  <text class="st18" transform="translate(771.6547 1102.4058)"><tspan x="0" y="0">Outbound</tspan></text>
+  <text class="st18" transform="translate(813.3198 1123.1977)"><tspan x="0" y="0">Route</tspan></text>
+  <g id="Layer_Flow_Arrows_Inbound" class="st21">
+    <g id="Arrow_User_to_Card1">
+      <path class="st39" d="M312,198v38c0,11.05,8.95,20,20,20h108c11.05,0,20,8.95,20,20v142c0,11.05-8.95,20-20,20h-36"/>
+      <polygon class="st62" points="386 438 410 424 410 452 386 438"/>
+    </g>
+    <g id="Arrow_Card1_to_Card2">
+      <path class="st39" d="M230,504v56c0,11.05,8.95,20,20,20h6"/>
+      <polygon class="st62" points="272 580 248 566 248 594 272 580"/>
+    </g>
+    <g id="Arrow_Card2_to_Coord">
+      <path class="st39" d="M496,652v194"/>
+      <path class="st39" d="M496,846h-152c-11.05,0-20,8.95-20,20v28"/>
+      <polygon class="st62" points="324 912 311 888 337 888 324 912"/>
+      <path class="st39" d="M496,846"/>
+    </g>
+    <g id="Loop_Continuous_Scheduling">
+  <g>
+    <path class="st35" d="M494.46,1284.45c14-22,34-59,34-114,0-58-40-102-42-142"/>
+    <polygon class="st62" points="474.46 1034.45 498.46 1034.45 486.46 1010.45 474.46 1034.45"/>
+    <polygon class="st62" points="487.46 1271.45 508.46 1282.45 486.46 1298.45 487.46 1271.45"/>
+  </g>
+      <path class="st35" d="M410,1028c-2,40-34,82-34,142,0,55,22,94,36,114"/>
+      <polygon class="st62" points="410 1010 398 1034 422 1034 410 1010"/>
+      <polygon class="st62" points="420 1298 398 1282 419 1271 420 1298"/>
+    </g>
+    <g id="Loop_KV_Cache">
+  <g>
+    <path class="st35" d="M685.8,1285.72c14-22,34-59,34-114,0-58-40-102-42-142"/>
+    <polygon class="st62" points="665.8 1035.72 689.8 1035.72 677.8 1011.72 665.8 1035.72"/>
+    <polygon class="st62" points="678.8 1272.72 699.8 1283.72 677.8 1299.72 678.8 1272.72"/>
+  </g>
+      <g>
+        <path class="st35" d="M596,1028c-2,40-42,84-42,142,0,55,20,92,34,114"/>
+        <polygon class="st62" points="596 1010 584 1034 608 1034 596 1010"/>
+        <polygon class="st62" points="596 1298 574 1282 595 1271 596 1298"/>
+      </g>
+    </g>
+  </g>
+  <g id="Arrow_Card5_to_Card6">
+    <path class="st45" d="M776.62,1325.28h93.77c11.04,0,20-8.96,20-20h0v-414"/>
+    <polygon class="st60" points="890.39 873.28 876.39 897.28 904.39 897.28 890.39 873.28"/>
+  </g>
+  <g id="Arrow_Card6_to_Card7">
+    <path class="st45" d="M805,784v-186"/>
+    <polygon class="st60" points="805 580 791 604 819 604 805 580"/>
+  </g>
+  <g id="Arrow_Card7_to_User">
+    <path class="st45" d="M805,444v-138c0-11.05,8.95-20,20-20h45c11.05,0,20-8.95,20-20v-48"/>
+    <polygon class="st60" points="890 200 876 224 904 224 890 200"/>
+  </g>
+  <g id="Loop_Coord_Optional">
+    <path class="st33" d="M950,762.84"/>
+  </g>
+  <g id="Card_6_Output_Processing">
+    <rect class="st57" x="678.55" y="748.54" width="256" height="124" rx="12" ry="12"/>
+    <g id="Icon_Output_Doc">
+      <path class="st36" d="M702.55,770.54h22l10,10v32h-32V770.54Z"/>
+      <polyline class="st36" points="724.55 770.54 724.55 780.54 734.55 780.54"/>
+      <line class="st44" x1="709.55" y1="788.54" x2="727.55" y2="788.54"/>
+      <line class="st44" x1="709.55" y1="796.54" x2="727.55" y2="796.54"/>
+      <line class="st44" x1="709.55" y1="804.54" x2="720.55" y2="804.54"/>
+    </g>
+    <text class="st18" transform="translate(754.55 782.54)"><tspan x="0" y="0">6. Output</tspan></text>
+    <text class="st18" transform="translate(754.55 808.54)"><tspan x="0" y="0">Processing</tspan></text>
+    <text class="st9" transform="translate(754.55 836.54)"><tspan x="0" y="0">Converts tokens to</tspan></text>
+    <text class="st9" transform="translate(754.55 856.54)"><tspan x="0" y="0">text</tspan></text>
+  </g>
+</svg>

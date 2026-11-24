@@ -1,0 +1,151 @@
+{
+  "layerBands": {
+    "gateway": "Layer_01_The_Gateway",
+    "coordination": "Layer_02_The_Coordination",
+    "model": "Layer_03_Model_Execution"
+  },
+  "alwaysDimmed": [],
+  "overview": {
+    "opening": "Placeholder: first we walk through the three layers of the AI stack. Then we follow one question as it travels through all of them.",
+    "transition": "Placeholder: now, follow one question through the whole stack."
+  },
+  "layers": [
+    {
+      "layer": "gateway",
+      "name": "The Gateway",
+      "visibility": "Observable text and API interactions",
+      "description": "Placeholder description of what the gateway layer does. Replace with episode content."
+    },
+    {
+      "layer": "coordination",
+      "name": "The Coordination Layer",
+      "visibility": "Monitored operations",
+      "description": "Placeholder description of what the coordination layer does. Replace with episode content."
+    },
+    {
+      "layer": "model",
+      "name": "The Model Execution Layer",
+      "visibility": "Partially understood model mechanisms",
+      "description": "Placeholder description of what the model execution layer does. Replace with episode content."
+    }
+  ],
+  "steps": [
+    {
+      "id": "start",
+      "layer": "user",
+      "stepLabel": "Start",
+      "title": "A question enters",
+      "description": "Placeholder description for the starting point of the journey. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "User_Input_Group",
+      "arrowGroupId": "Arrow_User_to_Card1",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "rgb(var(--ink-muted))"
+    },
+    {
+      "id": "safety-guardrails",
+      "layer": "gateway",
+      "stepLabel": "Step 1",
+      "title": "Safety Guardrails & Moderation",
+      "description": "Placeholder description for step one. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "Card_1_Safety_Guardrails",
+      "arrowGroupId": "Arrow_Card1_to_Card2",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "#38bdf8"
+    },
+    {
+      "id": "planning-retrieval-tokenization",
+      "layer": "gateway",
+      "stepLabel": "Step 2",
+      "title": "Planning, Retrieval & Tokenization",
+      "description": "Placeholder description for step two. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "Card_2_Planning_Retrieval",
+      "arrowGroupId": "Arrow_Card2_to_Coord",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "#38bdf8"
+    },
+    {
+      "id": "scheduler-batcher",
+      "layer": "coordination",
+      "stepLabel": "Step 3",
+      "title": "Scheduler & Batcher",
+      "description": "Placeholder description for step three. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "Card_3_Scheduler_Batcher",
+      "arrowGroupId": "Loop_Continuous_Scheduling",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "#2dd4bf"
+    },
+    {
+      "id": "kv-cache-manager",
+      "layer": "coordination",
+      "stepLabel": "Step 4",
+      "title": "KV Cache Manager",
+      "description": "Placeholder description for step four. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "Card_4_KV_Cache_Manager",
+      "arrowGroupId": "Loop_KV_Cache",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "#2dd4bf"
+    },
+    {
+      "id": "model-execution",
+      "layer": "model",
+      "stepLabel": "Step 5",
+      "title": "Model Execution",
+      "description": "Placeholder description for step five. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "Card_5_Model_Execution",
+      "arrowGroupId": "Arrow_Card5_to_Card6",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "#38d9f5"
+    },
+    {
+      "id": "output-processing",
+      "layer": "coordination",
+      "stepLabel": "Step 6",
+      "title": "Output Processing",
+      "description": "Placeholder description for step six. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "Card_6_Output_Processing",
+      "arrowGroupId": "Arrow_Card6_to_Card7",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "output-safety-delivery",
+      "layer": "gateway",
+      "stepLabel": "Step 7",
+      "title": "Output Safety & Delivery",
+      "description": "Placeholder description for step seven. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "Card_7_Output_Safety",
+      "arrowGroupId": "Arrow_Card7_to_User",
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "finish",
+      "layer": "user",
+      "stepLabel": "Finish",
+      "title": "Conclusion",
+      "description": "Placeholder description for the end of the journey. Replace with episode content.",
+      "mirrorNote": "Placeholder mirror note.",
+      "svgGroupId": "User_Output_Group",
+      "arrowGroupId": null,
+      "videoUrl": null,
+      "captionUrl": null,
+      "color": "rgb(var(--ink-muted))"
+    }
+  ]
+}

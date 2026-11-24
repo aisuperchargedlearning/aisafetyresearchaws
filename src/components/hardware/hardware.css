@@ -1,0 +1,349 @@
+.hw-section {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #edf2ed;
+  background: #101411;
+  color-scheme: dark;
+  font-synthesis: none;
+  --panel: #171d19;
+  --border: #303a33;
+  --muted: #a8b7aa;
+  --green: #b8f681;
+}
+.hw-section button:focus-visible,
+.hw-section a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+.hw-section .hw-explainer {
+  width: min(100% - 64px, 1160px);
+  margin-inline: auto;
+  padding-block: 40px 48px;
+}
+.hw-section .page-header {
+  margin-bottom: 24px;
+}
+.hw-section .episode-label {
+  margin: 0 0 8px;
+  color: rgb(88 104 122);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.hw-section .page-header h2 {
+  margin: 0;
+  font-size: clamp(1.85rem, 5vw, 3.75rem);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+.hw-section .page-header h2 span {
+  color: var(--green);
+}
+.hw-section .page-header p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.hw-section .explorer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(274px, 330px);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "board selection"
+    "board topics";
+  gap: 14px;
+}
+.hw-section .panel {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+}
+.hw-section .selection {
+  grid-area: selection;
+  padding: 15px;
+}
+.hw-section .current-topic {
+  border-left: 3px solid var(--selection-color);
+  padding-left: 12px;
+  margin-block: 2px 14px;
+}
+.hw-section .eyebrow,
+.hw-section .board-view-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hw-section .eyebrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 6px;
+}
+.hw-section .eyebrow span,
+.hw-section .topic-number {
+  font-variant-numeric: tabular-nums;
+}
+.hw-section .current-topic h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+.hw-section .step-controls {
+  display: flex;
+  gap: 8px;
+}
+.hw-section .step-controls button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 6px;
+  border: 1px solid #3b4840;
+  border-radius: 8px;
+  background: #222b25;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.hw-section .step-controls span {
+  color: var(--green);
+  font-size: 1rem;
+}
+.hw-section .board-panel {
+  grid-area: board;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #131815;
+}
+.hw-section .board-header,
+.hw-section .topics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px 16px;
+  min-height: 47px;
+  border-bottom: 1px solid var(--border);
+}
+.hw-section .board-header h2,
+.hw-section .topics-header h2 {
+  margin: 0;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+}
+.hw-section .board-stage {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at center, #19241a 0, transparent 74%),
+    radial-gradient(#303b32 0.75px, transparent 0.75px) 0 0 / 16px 16px;
+}
+.hw-section .hardware-board {
+  display: block;
+  width: min(100%, 502px);
+  height: auto;
+}
+.hw-section .board-artwork {
+  pointer-events: none;
+}
+.hw-section .hotspot {
+  cursor: pointer;
+  outline: none;
+}
+.hw-section .hotspot-region,
+.hw-section .hotspot-path {
+  vector-effect: non-scaling-stroke;
+  stroke: transparent;
+  stroke-width: 2;
+}
+.hw-section .hotspot-region {
+  fill: transparent;
+  pointer-events: fill;
+}
+.hw-section .hotspot-path {
+  fill: none;
+  pointer-events: none;
+}
+.hw-section .hotspot-path-hit {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 34;
+  pointer-events: stroke;
+}
+.hw-section .hotspot[aria-pressed="true"] .hotspot-region {
+  fill: color-mix(in srgb, var(--topic-color) 20%, transparent);
+}
+.hw-section .hotspot[aria-pressed="true"] :is(.hotspot-region, .hotspot-path) {
+  stroke: var(--topic-color);
+  stroke-width: 2.5;
+}
+.hw-section .hotspot:focus-visible :is(.hotspot-region, .hotspot-path) {
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 5 3;
+}
+.hw-section .topics {
+  grid-area: topics;
+  align-self: start;
+}
+.hw-section .topics ol {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 7px;
+  list-style: none;
+}
+.hw-section .topic-audio-slot {
+  padding: 8px 9px 6px;
+}
+
+.hw-section .topic-audio-slot .topic-audio,
+.hw-section .topic-audio-slot .topic-audio-unavailable {
+  margin: 0;
+}
+
+.hw-section .topics li {
+  min-width: 0;
+}
+.hw-section .topics li > button {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 8px;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+}
+.hw-section .topic-number {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.hw-section .topic-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--topic-color);
+}
+.hw-section .topics li > button[aria-pressed="true"] {
+  border-color: color-mix(in srgb, var(--topic-color) 48%, var(--border));
+  background: color-mix(in srgb, var(--topic-color) 12%, var(--panel));
+  font-weight: 650;
+}
+.hw-section .topics li > button[aria-pressed="true"] .topic-number {
+  color: var(--topic-color);
+}
+.hw-section .board-jump {
+  display: none;
+}
+@media (hover: hover) {
+  .hw-section .step-controls button:hover {
+    background: #2c3b30;
+  }
+  .hw-section .topics li > button:not([aria-pressed="true"]):hover {
+    background: #252e28;
+  }
+  .hw-section
+    .hotspot:not([aria-pressed="true"]):hover
+    :is(.hotspot-region, .hotspot-path) {
+    stroke: var(--topic-color);
+  }
+}
+@media (max-width: 950px) {
+  .hw-section .hw-explainer {
+    width: calc(100% - 40px);
+  }
+  .hw-section .explorer-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(238px, 285px);
+  }
+}
+@media (max-width: 650px) {
+  .hw-section .hw-explainer {
+    width: calc(100% - 24px);
+    padding-block: 24px;
+  }
+  .hw-section .page-header {
+    margin-inline: 4px;
+    margin-bottom: 16px;
+  }
+  .hw-section .page-header p {
+    font-size: 0.875rem;
+    margin-top: 8px;
+  }
+  .hw-section .explorer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "selection"
+      "board"
+      "topics";
+    gap: 10px;
+  }
+  .hw-section .board-jump {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--green);
+    font-size: 0.8125rem;
+    text-underline-offset: 3px;
+  }
+  .hw-section .topics-header {
+    padding-block: 1px;
+  }
+  /* One column so the inline audio player can span the full row width. */
+  .hw-section .topics ol {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hw-section .topics li > button {
+    grid-template-columns: 18px minmax(0, 1fr) 7px;
+    gap: 5px;
+    padding-inline: 6px;
+  }
+}
+
+/* Phone-only: narration panel pinned to the bottom of the screen while the explainer is in view. */
+.hw-section .floating-audio {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  margin: 12px -12px -24px;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 96%, black);
+  box-shadow: 0 -10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.hw-section .floating-audio-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.hw-section .floating-audio-label .topic-number {
+  color: var(--green);
+  font-size: 0.8125rem;
+}
+
+.hw-section .floating-audio .topic-audio,
+.hw-section .floating-audio .topic-audio-unavailable {
+  margin: 0;
+}

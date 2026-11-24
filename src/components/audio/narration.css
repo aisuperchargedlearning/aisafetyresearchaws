@@ -1,0 +1,61 @@
+/*
+ * Shared narration player styles. Each section themes the player by setting these variables on a
+ * parent element (all optional; the defaults are the hardware explainer's look):
+ *   --narration-accent, --narration-muted, --narration-button-bg, --narration-button-border
+ */
+.topic-audio,
+.topic-audio-unavailable {
+  margin: 0 0 10px;
+}
+.topic-audio-unavailable,
+.topic-audio-time,
+.topic-audio-error {
+  color: var(--narration-muted, var(--muted, #a8b7aa));
+  font-size: 0.75rem;
+}
+.topic-audio-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 6px;
+}
+.topic-audio-row button {
+  display: inline-grid;
+  place-items: center;
+  min-height: 36px;
+  border: 1px solid var(--narration-button-border, #3b4840);
+  border-radius: 8px;
+  background: var(--narration-button-bg, #222b25);
+  color: var(--narration-accent, var(--green, #b8f681));
+  cursor: pointer;
+}
+.topic-audio-play {
+  min-width: 48px;
+  padding-inline: 6px;
+  font-size: 0.75rem;
+}
+.topic-audio-volume {
+  width: 36px;
+  padding: 0;
+}
+.topic-audio-volume svg {
+  width: 17px;
+  height: 17px;
+}
+.topic-audio-progress {
+  width: 100%;
+  min-width: 0;
+  height: 28px;
+  margin: 0;
+  accent-color: var(--narration-accent, var(--green, #b8f681));
+}
+.topic-audio-time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.topic-audio-error {
+  margin: 6px 0 0;
+}
+.topic-audio-error:empty {
+  margin: 0;
+}

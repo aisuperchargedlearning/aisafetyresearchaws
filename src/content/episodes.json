@@ -1,0 +1,25 @@
+{
+  "series": {
+    "title": "Inside the Machine",
+    "tagline": "A video explainer series on AI safety, for policymakers."
+  },
+  "episodes": [
+    {
+      "slug": "frontier-ai-hardware-architecture",
+      "anchor": "hardware",
+      "number": 1,
+      "title": "Frontier AI Hardware Architecture",
+      "summary": "Placeholder summary. A look at the physical hardware that frontier AI systems run on.",
+      "svg": null,
+      "view": "hardware"
+    },
+    {
+      "slug": "software-security-ai-stack",
+      "anchor": "software",
+      "number": 2,
+      "title": "The Layered Frontier AI Software Architecture",
+      "summary": "Placeholder summary. Follow a single question as it travels through the software and security layers of an AI system.",
+      "svg": "Software-Security-AI-Stack-Vertical.svg"
+    }
+  ]
+}
