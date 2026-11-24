@@ -90,16 +90,16 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
   const canPrevious = selected !== null;
   const canNext = selected === null || selected < steps.length - 1;
 
-  // The infographic is portrait: the frame is a window onto it. The overview fits the whole picture beside the
-  // controls, or its full width when stacked; a selected step zooms in and scrolls to it (swipe to look around).
+  // The infographic is portrait: the frame is a window onto it. The overview always fits the whole picture in the
+  // frame (phones included, so the first view is the full stack for reference); a selected step zooms in and scrolls to it (swipe to look around).
   const frameWidth = wide
     ? Math.min(DIAGRAM_COLUMN, Math.min(viewport.width, MAX_WIDTH) - WIDE_GUTTER * 2 - SIDE_MIN - SIDE_GAP)
     : viewport.width;
   const frameHeight = wide
     ? Math.max(480, Math.min(viewport.height * 0.86, 1000))
-    : Math.max(260, viewport.height * 0.46);
+    : Math.max(260, viewport.height * 0.58);
   const fitScale = Math.min(frameWidth / viewBox.width, frameHeight / viewBox.height);
-  const overviewScale = wide ? fitScale : frameWidth / viewBox.width;
+  const overviewScale = fitScale;
   // Stable between renders so the diagram's pan animation isn't restarted by unrelated updates (audio progress).
   const layout = useMemo<DiagramLayout>(
     () => ({
