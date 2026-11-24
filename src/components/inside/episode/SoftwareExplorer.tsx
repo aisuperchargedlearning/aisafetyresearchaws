@@ -59,7 +59,8 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
   const step = selected === null ? null : steps[selected];
   // The Conclusion (the last item) steps back to the whole architecture rather than zooming into one part.
   const isConclusion = step?.id === 'finish';
-  const showAll = selected === null || isConclusion;
+  // The intro (step 00) also stays on the whole architecture while it introduces the stack.
+  const showAll = selected === null || isConclusion || step?.id === 'start';
   const focus: DiagramFocus =
     isConclusion && cue !== null
       ? { kind: 'steps', indices: CONCLUSION_CUES[cue].steps }

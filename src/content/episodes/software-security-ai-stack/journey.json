@@ -34,7 +34,7 @@
       "id": "start",
       "layer": "user",
       "stepLabel": "Start",
-      "title": "A question enters",
+      "title": "Intro Prompt Entry",
       "description": "Placeholder description for the starting point of the journey. Replace with episode content.",
       "mirrorNote": "Placeholder mirror note.",
       "svgGroupId": "User_Input_Group",

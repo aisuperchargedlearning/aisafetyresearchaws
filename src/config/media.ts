@@ -22,6 +22,7 @@ export const HARDWARE_AUDIO: Record<string, string> = {
 // Narration for the software architecture walkthrough, keyed by journey step id
 // (see src/content/episodes/software-security-ai-stack/journey.json). Steps without a URL show "Audio coming soon".
 export const SOFTWARE_AUDIO: Record<string, string> = {
+  start: 'https://ik.imagekit.io/a7tech/SoftwarestackAudio/00%20Intro%20Software.mp3',
   'safety-guardrails': 'https://ik.imagekit.io/a7tech/SoftwarestackAudio/1.%20Safety%20Guardrails%20&%20Moderation.mp3',
   'planning-retrieval-tokenization':
     'https://ik.imagekit.io/a7tech/SoftwarestackAudio/2.%20Planning,%20Retrieval%20&%20Tokenization.mp3',
