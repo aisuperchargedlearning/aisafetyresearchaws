@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import type { DiagramFocus, EpisodeMeta, Journey, ViewBox } from '@/types/episode';
 import { SOFTWARE_AUDIO } from '@/config/media';
@@ -49,6 +49,7 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
   const viewport = useViewportSize();
   const wide = useMediaQuery(WIDE_QUERY);
   const rootRef = useRef<HTMLDivElement>(null);
+  const stackedDiagramRef = useRef<HTMLDivElement>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [cue, setCue] = useState<number | null>(null);
   const [steppedBack, setSteppedBack] = useState<string | null>(null);
@@ -84,6 +85,14 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
   const num = (index: number) => String(index).padStart(2, '0');
   const lastStep = steps.length - 1;
   const episodeLabel = `Episode ${String(episode.number).padStart(2, '0')}`;
+
+  // On phones the diagram scrolls away with the page; choosing a step from the list or Previous/Next brings it back
+  // into view so the zoom isn't missed.
+  useEffect(() => {
+    const el = stackedDiagramRef.current;
+    if (wide || selected === null || !el) return;
+    if (el.getBoundingClientRect().top < -4) el.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }, [selected, wide]);
 
   const goPrevious = () => setSelected((index) => (index === null || index === 0 ? null : index - 1));
   const goNext = () => setSelected((index) => (index === null ? 0 : Math.min(index + 1, steps.length - 1)));
@@ -253,7 +262,7 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
         </div>
       ) : (
         <>
-          <div className="sticky top-0 z-10 border-y border-line/50 bg-field">{diagram}</div>
+          <div ref={stackedDiagramRef} className="border-y border-line/50 bg-field">{diagram}</div>
           <div className="px-3 pb-8 pt-4 md:px-8">
             <nav aria-label="Steps" className="mx-auto max-w-3xl rounded-2xl border border-line bg-field-raised">
               {stepsHeader}
