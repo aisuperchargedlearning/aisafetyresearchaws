@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import type { DiagramFocus, EpisodeMeta, Journey, ViewBox } from '@/types/episode';
 import { SOFTWARE_AUDIO } from '@/config/media';
@@ -7,6 +7,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { usePauseAudioOffscreen } from '@/hooks/usePauseAudioOffscreen';
 import { useViewportSize } from '@/hooks/useViewportSize';
 import NarrationPlayer from '@/components/audio/NarrationPlayer';
+import { useStory } from '@/components/story/storyContext';
 import { DiagramStage } from '@/components/inside/diagram/DiagramStage';
 import type { DiagramLayout } from '@/components/inside/diagram/diagramLayout';
 
@@ -50,7 +51,22 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
   const wide = useMediaQuery(WIDE_QUERY);
   const rootRef = useRef<HTMLDivElement>(null);
   const stackedDiagramRef = useRef<HTMLDivElement>(null);
-  const [selected, setSelected] = useState<number | null>(null);
+  const [localSelected, setLocalSelected] = useState<number | null>(null);
+  const story = useStory();
+  // While "watch the whole story" is in the software part, the story picks the step; otherwise the viewer does.
+  const storyIndex = story.chapter?.part === 'software' ? story.chapter.index : null;
+  const selected = storyIndex ?? localSelected;
+  // Keep the viewer's own selection where the story left off when it stops.
+  useEffect(() => {
+    if (storyIndex !== null) setLocalSelected(storyIndex);
+  }, [storyIndex]);
+  const setSelected = (index: number | null) => {
+    if (story.active) {
+      if (index !== null) story.goTo(story.indexOf('software', index), { scroll: false });
+    } else {
+      setLocalSelected(index);
+    }
+  };
   const [cue, setCue] = useState<number | null>(null);
   const [steppedBack, setSteppedBack] = useState<string | null>(null);
   usePauseAudioOffscreen(rootRef);
@@ -80,6 +96,14 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
           setSteppedBack(seconds >= hold ? step.id : null);
         }
     : undefined;
+  // The story's shared audio feeds the same diagram timing the step's own player does.
+  const timeRef = useRef(onNarrationTime);
+  useLayoutEffect(() => {
+    timeRef.current = onNarrationTime;
+  });
+  useEffect(() => {
+    if (storyIndex !== null) timeRef.current?.(story.position, story.duration);
+  }, [storyIndex, story.position, story.duration]);
   const audioUrl = step ? (SOFTWARE_AUDIO[step.id] ?? '') : '';
   const accent = step?.color ?? 'rgb(var(--ink-muted))';
   // Two-digit numbers like the hardware topics: Start is 00, the steps 01 to 07, the Conclusion 08.
@@ -95,9 +119,9 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
     if (el.getBoundingClientRect().top < -4) el.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }, [selected, wide]);
 
-  const goPrevious = () => setSelected((index) => (index === null || index === 0 ? null : index - 1));
-  const goNext = () => setSelected((index) => (index === null ? 0 : Math.min(index + 1, steps.length - 1)));
-  const canPrevious = selected !== null;
+  const goPrevious = () => setSelected(selected === null || selected === 0 ? null : selected - 1);
+  const goNext = () => setSelected(selected === null ? 0 : Math.min(selected + 1, steps.length - 1));
+  const canPrevious = selected !== null && !(story.active && selected === 0);
   const canNext = selected === null || selected < steps.length - 1;
 
   // The infographic is portrait: the frame is a window onto it. The overview always fits the whole picture in the
@@ -156,7 +180,7 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
               <span>{item.title}</span>
               <span aria-hidden className="h-[7px] w-[7px] rounded-full bg-[color:var(--step-color)]" />
             </button>
-            {wide && isSelected && (
+            {wide && isSelected && !story.active && (
               <div className="px-[9px] pb-1.5 pt-2">
                 <NarrationPlayer key={item.id} audioUrl={audioUrl} onTime={onNarrationTime} />
               </div>
@@ -270,6 +294,7 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
               {stepList}
             </nav>
           </div>
+          {!story.active && (
           <div
             role="region"
             aria-label="Step narration"
@@ -313,6 +338,7 @@ export function SoftwareExplorer({ episode, journey, svg, viewBox }: SoftwareExp
               <p className="text-xs text-ink-muted">Tap a step on the diagram, or press Next to begin.</p>
             )}
           </div>
+          )}
         </>
       )}
     </div>

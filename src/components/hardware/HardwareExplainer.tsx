@@ -1,14 +1,27 @@
-import { Fragment, useRef, useState, type CSSProperties } from 'react';
+import { Fragment, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { usePauseAudioOffscreen } from '@/hooks/usePauseAudioOffscreen';
 import NarrationPlayer from '@/components/audio/NarrationPlayer';
+import { useStory } from '@/components/story/storyContext';
 import { boardMarkup, topics, viewBox } from './board';
 import './hardware.css';
 
 const number = (index: number) => String(index).padStart(2, '0');
 
 export default function HardwareExplainer({ id, episodeNumber }: { id?: string; episodeNumber?: number }) {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [localIndex, setLocalIndex] = useState(0);
+  const story = useStory();
+  // While "watch the whole story" is in the hardware part, the story picks the topic; otherwise the viewer does.
+  const storyIndex = story.chapter?.part === 'hardware' ? story.chapter.index : null;
+  const selectedIndex = storyIndex ?? localIndex;
+  // Keep the viewer's own selection where the story left off when it stops.
+  useEffect(() => {
+    if (storyIndex !== null) setLocalIndex(storyIndex);
+  }, [storyIndex]);
+  const setSelectedIndex = (index: number) => {
+    if (story.active) story.goTo(story.indexOf('hardware', index), { scroll: false });
+    else setLocalIndex(index);
+  };
   // Phones get a pinned bottom panel; wider screens keep the player under the selected row in the list.
   const isPhone = useMediaQuery('(max-width: 650px)');
   const sectionRef = useRef<HTMLElement>(null);
@@ -20,7 +33,7 @@ export default function HardwareExplainer({ id, episodeNumber }: { id?: string; 
   const isIntroduction = selected.id === 'intro';
 
   function moveSelection(direction: number) {
-    setSelectedIndex((index) => (index + direction + topics.length) % topics.length);
+    setSelectedIndex((selectedIndex + direction + topics.length) % topics.length);
   }
 
   return (
@@ -148,7 +161,7 @@ export default function HardwareExplainer({ id, episodeNumber }: { id?: string; 
                     <span>{topic.name}</span>
                     <span className="topic-dot" aria-hidden="true" />
                   </button>
-                  {index === selectedIndex && !isPhone && (
+                  {index === selectedIndex && !isPhone && !story.active && (
                     <div className="topic-audio-slot">
                       <NarrationPlayer key={topic.id} audioUrl={topic.audioUrl} />
                     </div>
@@ -159,7 +172,7 @@ export default function HardwareExplainer({ id, episodeNumber }: { id?: string; 
           </nav>
         </div>
 
-        {isPhone && (
+        {isPhone && !story.active && (
           <div className="floating-audio" role="region" aria-label="Topic narration">
             <p className="floating-audio-label">
               <span className="topic-number">{number(selectedIndex)}</span> {selected.name}
